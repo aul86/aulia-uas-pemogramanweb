@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login and Registration Section -->
+        <div class="auth-container">
+            <div class="auth-form" id="login-form">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="email" required>
+
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" required>
+
+                    <button type="submit">Login</button>
+                    <p>Belum punya akun? <a href="#" id="show-register">Daftar</a></p>
+                </form>
+            </div>
+
+            <div class="auth-form" id="register-form" style="display: none;">
+                <h2>Registrasi</h2>
+                <form id="registerForm">
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" name="email" required>
+
+                    <label for="register-password">Password:</label>
+                    <input type="password" id="register-password" name="password" required>
+
+                    <button type="submit">Daftar</button>
+                    <p>Sudah punya akun? <a href="#" id="show-login">Login</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-container" style="display: none;">
+            <aside class="sidebar">
+                <div class="profile">
+                    <span class="profile-name">Tasya</span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#dashboard" class="nav-item" data-content="dashboard">Dashboard</a></li>
+                        <li><a href="#presensi" class="nav-item" data-content="presensi">Presensi</a></li>
+                        <li><a href="#jadwal" class="nav-item" data-content="jadwal">Jadwal</a></li>
+                        <li><a href="#ujian" class="nav-item" data-content="ujian">Ujian</a></li>
+                        <li><a href="#email" class="nav-item" data-content="email">Email</a></li>
+                        <li><a href="#rekapitulasi" class="nav-item" data-content="rekapitulasi">Rekapitulasi Nilai dan Form Tambah data</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="main-content">
+                <header>
+                    <h1 id="page-title">Dashboard</h1>
+                </header>
+                <section class="content" id="content"></section>
+                <section class="form-container" id="form-container"></section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
